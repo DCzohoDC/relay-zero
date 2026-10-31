@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#07121a">
+  <meta name="description" content="A touch-friendly original sci-fi survival game.">
+  <title>Relay Zero</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="Relay Zero game"></canvas>
+    <header id="hud" class="hidden">
+      <div class="brand">RELAY <b>ZERO</b><small>FIELD OPERATION 01</small></div>
+      <div class="mission"><span id="objective-label">LEVEL 1 / 5 · THE DUST SEA</span><strong id="objective">HOSTILES 0 / 5</strong></div>
+      <div class="vitals"><span>VITALS</span><div class="health-track"><i id="health"></i></div><b id="health-text">100</b></div>
+      <button id="sound-button" aria-label="Mute audio" title="Mute audio">♫</button>
+      <button id="pause-button" aria-label="Pause">Ⅱ</button>
+    </header>
+    <div id="boss-status" class="boss-status hidden">
+      <div class="boss-heading"><span>WARDEN</span><strong id="boss-state">ARMORED</strong></div>
+      <div class="boss-health-track"><i id="boss-health"></i></div>
+    </div>
+    <div id="cover-indicator" class="hidden">▰ IN COVER</div>
+    <div id="mission-toast" class="hidden"></div>
+    <div id="context-hint" class="hidden"></div>
+    <section id="screen" class="screen">
+      <div class="screen-card">
+        <p class="eyebrow">FIVE-LEVEL CAMPAIGN · KESTREL SECTOR</p>
+        <h1>RELAY<br><span>ZERO</span></h1>
+        <p class="intro">Lead scout Kite and breacher Brick through five hostile sites. Complete every objective in a level, then reach extraction to move on.</p>
+        <div class="briefing"><span>DEPLOYMENT</span><b>Dust Sea → Cryo Array → Canopy Lab → Ember Foundry → Orbital Crown</b><span>FIELD TIP</span><b>Objective nodes advance the mission; extraction advances the level</b></div>
+        <button id="start-button" class="primary">DEPLOY <span>→</span></button>
+        <p class="controls-hint">MOVE <kbd>W A S D</kbd> &nbsp; FIRE <kbd>CLICK / F</kbd> &nbsp; WEAPON <kbd>Q</kbd> &nbsp; DASH <kbd>SPACE</kbd> &nbsp; COVER <kbd>E</kbd></p>
+      </div>
+    </section>
+    <div id="touch-controls" class="hidden">
+      <div id="move-stick" class="stick"><div class="stick-ring"></div><div class="stick-knob"></div><label>MOVE</label></div>
+      <button id="weapon-button" class="weapon-button" type="button" aria-label="Switch weapon">SWAP · SIDEARM</button>
+      <div id="cover-button" class="action-button cover-button">COVER</div>
+      <div id="use-button" class="action-button use-button hidden">USE</div>
+      <div id="dash-button" class="action-button dash-button">DASH</div>
+      <div id="fire-button" class="fire-button"><span>FIRE</span></div>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
