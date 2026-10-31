@@ -8,8 +8,7 @@ Complete all objectives in a level before its extraction marker appears;
 activating an objective advances the current level's mission, not the campaign.
 Only reaching and holding the extraction point moves the squad to the next
 level. Scout Kite and breacher Brick follow your lead and engage nearby
-hostiles. It uses procedural canvas graphics and original names; it does not
-use or extract content from the iOS game archive in this folder.
+hostiles. It uses procedural canvas graphics and original names.
 
 ## Play on Android
 
